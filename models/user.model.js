@@ -19,8 +19,18 @@ const seedUserData = () => {
             { name: "Angel And Demon", description: "Novel", status: "New" },
         ],
     });
+    const userShatha = new userModel({
+        email: "alsmadishatha@gmail.com",
+        books: [
+            { name: "Harry Potter", description: "Fantasia", status: "New" },
+            { name: "the prince", description: "Political", status: "Used" },
+            { name: "Angel And Demon", description: "Novel", status: "New" },
+        ],
+    });
+    console.log(userShatha);
     console.log(newUser);
     newUser.save();
+    userShatha.save();
 };
 seedUserData();
 module.exports = userModel;
