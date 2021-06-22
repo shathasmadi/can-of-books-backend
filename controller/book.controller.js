@@ -28,14 +28,14 @@ const createBook = (req, res) => {
 };
 
 const deleteBook = (req, res) => {
-  const bookIndex = req.params.book_idx;
+  const bookId = req.params.id;
   const { email } = req.query;
 
   userModel.findOne({ email: email }, (error, userData) => {
     if (error) {
       res.send(error);
     } else {
-      userData.books.splice(bookIndex, 1);
+      userData.books = userData.books.filter((book) => book._id != bookId);
       userData.save();
       res.json(userData);
     }

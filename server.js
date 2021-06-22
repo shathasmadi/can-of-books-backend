@@ -17,11 +17,11 @@ app.use(express.json());
 
 mongoose.connect("mongodb://localhost:27017/myFavoriteBooks", { useNewUrlParser: true, useUnifiedTopology: true });
 
-seedUserData();
+// seedUserData();
 
 app.get("/", indexController);
 app.get("/books", getBook);
 app.post("/book", createBook);
-app.delete("/book/:book_idx", deleteBook);
+app.delete("/book/:id", deleteBook);
 
 app.listen(PORT, () => console.log(`listening ${PORT}`));

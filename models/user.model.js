@@ -34,5 +34,5 @@ const seedUserData = () => {
   newUser.save();
   // userShatha.save();
 };
-
+// seedUserData();
 module.exports = { userModel, seedUserData };
