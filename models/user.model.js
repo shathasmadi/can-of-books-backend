@@ -11,28 +11,26 @@ const userScheme = new mongoose.Schema({
 const userModel = mongoose.model("user", userScheme);
 
 const seedUserData = () => {
-  const newUser = new userModel(
-    {
-      email: "archaseel.1992@gmail.com",
-      books: [
-        { name: "Harry Potter", description: "Fantasia", status: "New" },
-        { name: "the prince", description: "Political", status: "Used" },
-        { name: "Angel And Demon", description: "Novel", status: "New" },
-      ],
-    },
-    {
-      email: "alsmadishatha@gmail.com",
-      books: [
-        { name: "Harry Potter", description: "Fantasia", status: "New" },
-        { name: "the prince", description: "Political", status: "Used" },
-        { name: "Angel And Demon", description: "Novel", status: "New" },
-      ],
-    }
-  );
-  // console.log(userShatha);
-  console.log(newUser);
-  newUser.save();
-  // userShatha.save();
+    const userAseel = new userModel({
+        email: "archaseel.1992@gmail.com",
+        books: [
+            { name: "Harry Potter", description: "Fantasia", status: "New" },
+            { name: "the prince", description: "Political", status: "Used" },
+            { name: "Angel And Demon", description: "Novel", status: "New" },
+        ],
+    });
+    const userShatha = new userModel({
+        email: "alsmadishatha@gmail.com",
+        books: [
+            { name: "Harry Potter", description: "Fantasia", status: "New" },
+            { name: "the prince", description: "Political", status: "Used" },
+            { name: "Angel And Demon", description: "Novel", status: "New" },
+        ],
+    });
+    console.log(userShatha);
+    console.log(userAseel);
+    userAseel.save();
+    userShatha.save();
 };
 // seedUserData();
 module.exports = { userModel, seedUserData };
