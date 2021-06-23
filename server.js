@@ -7,7 +7,6 @@ const indexController = require("./controller/index.controller");
 
 require("dotenv").config();
 const PORT = process.env.PORT;
-// const MONGO_URL = process.env.MONGO_URL;
 
 const { seedUserData } = require("./models/user.model");
 const axios = require("axios");
