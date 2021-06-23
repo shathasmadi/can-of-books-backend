@@ -14,11 +14,10 @@ const cors = require("cors");
 
 app.use(cors());
 
-mongoose.connect("mongodb://localhost:27017/myFavoriteBooks", { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect(process.env.MONGO_URL, { useNewUrlParser: true, useUnifiedTopology: true });
 
 // seedUserData();
 
 app.get("/", indexController);
 app.get("/books", getBook);
-
 app.listen(PORT, () => console.log(`listening ${PORT}`));

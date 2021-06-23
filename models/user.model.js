@@ -32,5 +32,5 @@ const seedUserData = () => {
     newUser.save();
     userShatha.save();
 };
-seedUserData();
+// seedUserData();
 module.exports = userModel;
