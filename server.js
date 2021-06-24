@@ -17,7 +17,7 @@ app.use(express.json());
 
 mongoose.connect(process.env.MONGO_URL, { useNewUrlParser: true, useUnifiedTopology: true });
 
-seedUserData();
+// seedUserData();
 
 app.get("/", indexController);
 app.get("/books", getBook);
