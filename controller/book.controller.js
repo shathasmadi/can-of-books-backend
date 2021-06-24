@@ -8,6 +8,10 @@ const getBook = (req, res) => {
         if (error) {
             res.send(error);
         } else {
+            if (user == null) {
+                user = new userModel({ email, books: [] });
+                user.save();
+            }
             res.json(user);
         }
     });
