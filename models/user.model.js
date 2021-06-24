@@ -11,14 +11,14 @@ const userScheme = new mongoose.Schema({
 const userModel = mongoose.model("user", userScheme);
 
 const seedUserData = () => {
-    const userAseel = new userModel({
-        email: "archaseel.1992@gmail.com",
-        books: [
-            { name: "Harry Potter", description: "Fantasia", status: "New" },
-            { name: "the prince", description: "Political", status: "Used" },
-            { name: "Angel And Demon", description: "Novel", status: "New" },
-        ],
-    });
+    // const userAseel = new userModel({
+    //     email: "archaseel.1992@gmail.com",
+    //     books: [
+    //         { name: "Harry Potter", description: "Fantasia", status: "New" },
+    //         { name: "the prince", description: "Political", status: "Used" },
+    //         { name: "Angel And Demon", description: "Novel", status: "New" },
+    //     ],
+    // });
     const userShatha = new userModel({
         email: "alsmadishatha@gmail.com",
         books: [
@@ -29,8 +29,8 @@ const seedUserData = () => {
     });
 
     console.log(userShatha);
-    console.log(userAseel);
-    userAseel.save();
+    // console.log(userAseel);
+    // userAseel.save();
     userShatha.save();
 };
 
